@@ -11,17 +11,20 @@ public class Strings {
 
     public static void main(String[] args)
     {
-        String [] cats  = {"Koshka", "Ana", "Macedonia", "654835723852386583276", "skdufgsjbdfklj"};
-        String longestS = null;
-        int longest = 0;
-        for (String s: cats)
-        {
-            if (s.length() > longest)
+        fuckingReverseString("Nastya");
 
-            longest = s.length();
-            longestS = s;
-        }
-        System.out.println("Longest string in the array is " + longestS);
+
+//        String [] cats  = {"Koshka", "Ana", "Macedonia", "654835723852386583276", "skdufgsjbdfklj"};
+//        String longestS = null;
+//        int longest = 0;
+//        for (String s: cats)
+//        {
+//            if (s.length() > longest)
+//
+//            longest = s.length();
+//            longestS = s;
+//        }
+//        System.out.println("Longesqwe   wqeqt string in the array is " + longestS);
 
 
 
@@ -195,5 +198,14 @@ public class Strings {
                 System.out.println("no");
             }
 
+    }
+    static void fuckingReverseString(String input) {
+        String result =  "";
+        for (int i = input.length()-1; i >=0; i--)
+
+        {
+            result = result + input.charAt(i);
+        }
+        System.out.println(result);
     }
 }

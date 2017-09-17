@@ -1,5 +1,3 @@
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.Scanner;
@@ -8,13 +6,6 @@ public class Numbers{
     static Scanner input = new Scanner(System.in);
     //new Scanner(System.in).nextInt();
     static DecimalFormat df = new DecimalFormat("####0.0");
-    public static void main(String[] args) throws IOException
-        {
-
-            int x = 1 % 3;
-            System.out.println(x);
-
-        }
     public static void  palindrome()
         {
             System.out.println("Enter 3 digit number:");
@@ -41,12 +32,12 @@ public class Numbers{
                 {
                     if (secondInt >= thirdInt)
                         {
-                            System.out.println(firstInt + "   ,  " + secondInt + "  ,  " + thirdInt);
+                            System.out.println(firstInt + ",  " + secondInt + ",  " + thirdInt);
                         }
 
                     else
                         {
-                            System.out.println(firstInt + "   ,  " + thirdInt + "  ,  " + secondInt);
+                            System.out.println(firstInt + ",  " + thirdInt + ",  " + secondInt);
                         }
                 }
 
@@ -54,22 +45,22 @@ public class Numbers{
                 {
                     if (firstInt >= thirdInt)
                         {
-                            System.out.println(secondInt + "   ," + firstInt + "  ,  " + thirdInt);
+                            System.out.println(secondInt + ", " + firstInt + ", " + thirdInt);
                         }
                     else
                         {
-                            System.out.println(secondInt + "  , " + thirdInt + "  " + secondInt);
+                            System.out.println(secondInt + ", " + thirdInt + ", " + secondInt);
                         }
                 }
             if (thirdInt > firstInt && thirdInt > secondInt)
                 {
                     if (firstInt >= secondInt)
                         {
-                            System.out.println(thirdInt + " ,  " + firstInt + " , " + secondInt);
+                            System.out.println(thirdInt + ", " + firstInt + ", " + secondInt);
                         }
                     else
                         {
-                            System.out.println(thirdInt + "  , " + secondInt + " , " + firstInt);
+                            System.out.println(thirdInt + ", " + secondInt + ", " + firstInt);
                         }
                 }
 

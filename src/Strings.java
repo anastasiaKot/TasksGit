@@ -9,9 +9,6 @@ public class Strings {
     static Scanner input  =  new Scanner(System.in);
     static DecimalFormat df = new DecimalFormat("####0.0");
 
-    public static void main(String[] args)
-    {
-        fuckingReverseString("Nastya");
 
 
 //        String [] cats  = {"Koshka", "Ana", "Macedonia", "654835723852386583276", "skdufgsjbdfklj"};
@@ -29,7 +26,6 @@ public class Strings {
 
 
 
-    }
 
     public static void test001(){
         String name = "namename";
@@ -38,8 +34,8 @@ public class Strings {
 
     }
     public static void reverseString(){
-        String normal = "I wankjbkfds dkhf dkjf dst sleep";
-        String reverse; //field
+        String normal = "I need sleep";
+        String reverse;
         System.out.println(reverse =  new StringBuffer(normal).reverse().toString()); //constructor
     }
 
@@ -189,7 +185,8 @@ public class Strings {
             System.out.println("please enter String2 ");
 
         String in2 = input.nextLine();
-       boolean t = in1.contains(in2);
+     //  boolean t = in1.contains(in2);
+            boolean t = in1.contains(in2);
             if (t)
                 {
                     System.out.println(in1 + " contains " + in2);
@@ -199,6 +196,7 @@ public class Strings {
             }
 
     }
+
     static void fuckingReverseString(String input) {
         String result =  "";
         for (int i = input.length()-1; i >=0; i--)

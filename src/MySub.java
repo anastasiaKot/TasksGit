@@ -25,7 +25,7 @@ int i = 3;
 public int method(){
 return i * i;
 }
-public static void main(String[] args){
+public static void haha(String[] args){
 MySuper s = new MySub();
 System.out.print("-x" + s.method());
 System.out.print("-x" + s.i);

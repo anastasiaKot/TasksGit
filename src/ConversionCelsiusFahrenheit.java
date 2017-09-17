@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ConversionCelsiusFahrenheit
 {
-        public static void main(String[] args) {
+        public static void computeSmth() {
             System.out.printf("%-15s%-15s|%-15s%-15s\n","Celsius","Fahrenheit","Fahrenheit","Celsius");
             System.out.println( String.format("%62s"," ").replace(' ', '-') );
 

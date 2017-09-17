@@ -1,14 +1,9 @@
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.Scanner;
 
 public class Methods {
 
     static Scanner input = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        printChars('A', 'W', 3);
-    }
 
     public static void test1() {
         int max = 0;

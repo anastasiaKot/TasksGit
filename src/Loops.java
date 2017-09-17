@@ -1,13 +1,9 @@
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import java.util.Scanner;
 
 public class Loops {
 
      static Scanner input = new Scanner(System.in);
 
-     public static void main(String[] args)
-     {
-displayFourPatternsUsingLoopsPatternC();     }
 
 //(Display prime numbers between 2 and 1,000) Modify Listing 5.15
 // to display all the prime numbers between 2 and 1,000, inclusive.

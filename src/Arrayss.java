@@ -4,14 +4,21 @@
  */
 public class Arrayss {
     static int[] mynew = new int[10];
+    static int[] catarray = new int [2];
 
-    public static void main(String[] args)
+
+    public static void smth()
     {
-        one();
-
+        for (int i = 0; i < mynew.length; i++)
+        {
+            mynew[i] = i+7;
         }
+        System.out.println(mynew.length);
+        //one();
 
-    public static void one ()
+    }
+
+    //public static void one ()
     {
         for (int i = 0; i < mynew.length; i++) {
             mynew[i] = i+7;

@@ -185,7 +185,6 @@ public class Strings {
             System.out.println("please enter String2 ");
 
         String in2 = input.nextLine();
-     //  boolean t = in1.contains(in2);
             boolean t = in1.contains(in2);
             if (t)
                 {

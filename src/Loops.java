@@ -158,26 +158,32 @@ public class Loops {
 
 
 
-     static void computeGCD()
-     {
-         System.out.println("Enter first number; ");
-         int first = input.nextInt();
-         System.out.println("Enter second numnber:  ");
-         int second = input.nextInt();
+     public void computeGCD(int number1, int number2)
+//     {
+//         System.out.println("Enter first number; ");
+//         int first = input.nextInt();
+//         System.out.println("Enter second numnber:  ");
+//         int second = input.nextInt();
+//         System.out.println("Enter third number:  ");
+//
+//         int third = input.nextInt();
+//
+//         int gcd = 1;
+//         int k = 1;
+//
+//         while (k <= first && k <= second && k <= third)
+//         {
+//             if (first % k == 0 && second % k == 0 && third % k == 0)
+//             {
+//                 gcd = k;
+//             }
+//             k++;
+//         }
+//         System.out.println("Your greatest  gcd is   " + gcd);
+//
+//     }
 
-         int gcd = 1;
-         int k = 1;
-         while (k <= first && k <= second)
-         {
-             if (first % k == 0 && second % k == 0)
-             {
-                 gcd = k;
-             }
-             k++;
-         }
-         System.out.println(gcd);
 
-     }
      //(Find the smallest n such that n2 7 12,000)
      // Use a while loop to find the smallest integer n such that n2 is greater than 12,000.
      static void findSmallest()

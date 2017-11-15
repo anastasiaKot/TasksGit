@@ -42,33 +42,23 @@ public class Loops {
     }
 
 
-    private static void displayFourPatternsUsingLoopsPatternB() {
+    public  void displayFourPatternsUsingLoopsPatternD() {
 
-        int input = 6;
-        for (int x = 1; x < (input + 1); x++) // x = lines
-        {
-            for (int y = x; y > 1; y--)
-            {
-                System.out.print(" ");
+        for (int x = 1; x < 6; x++) {
+
+            for (int a = 0; a < x; a++) {
+                System.out.print("  ");
             }
-            for ( int y = 1; y <= input+1-x; y++)
-            {
-                System.out.print(y + "");
-           }
-
-//            for (int y = 1; y <= input - x; y++) // y = iteraations in the lines
-//            {
-//                System.out.print(" ");
-//            }
-
+            for (int c = 1; c <= 6 - x; c++) {
+                System.out.print(c + " ");
+            }
             System.out.println();
-
 
         }
     }
 
 
-    private static void displayFourPatternsUsingLoopsPatternC()
+    public void displayFourPatternsUsingLoopsPatternC()
     {
         int l = 6;
         for (int x = 1; x < (l +1); x++) //x это линии
@@ -86,16 +76,7 @@ public class Loops {
 
     }
 
-    static void displayFourPatternsUsingLoops()
-     {
-         int x = 1;
-         for (x = 1; x <= 6; x++)
-         {
-             System.out.println(x);
-         }
-    }
-
-    static void displayFourPatternsUsingLoopsBackwords()
+    public void displayFourPatternB()
     {
         int input = 6;
         for (int x = 1; x <= (input +1); x++)
@@ -105,6 +86,38 @@ public class Loops {
             {
                 System.out.print(y);
             }
+            System.out.println();
+        }
+    }
+
+    public void displayPatternsCC() {
+        int line = 6;
+        String string = " ";
+
+        for (int six = 1 ; six <= line; six++)
+        {
+            String boo = "%" + (line + 1 - six) + "s";
+
+            System.out.printf(boo, string);
+
+            for (int sec = six; sec >= 1; sec--)
+            {
+                System.out.print(sec);
+            }
+
+            System.out.println();
+        }
+    }
+    public void displayPatternsBB() {
+
+        for (int six = 6 ; six >= 1; six --)
+        {
+
+            for (int sec = 1; sec <= six; sec++)
+            {
+                System.out.print(sec + " ");
+            }
+
             System.out.println();
         }
     }
@@ -159,29 +172,29 @@ public class Loops {
 
 
      public void computeGCD(int number1, int number2)
-//     {
-//         System.out.println("Enter first number; ");
-//         int first = input.nextInt();
-//         System.out.println("Enter second numnber:  ");
-//         int second = input.nextInt();
-//         System.out.println("Enter third number:  ");
-//
-//         int third = input.nextInt();
-//
-//         int gcd = 1;
-//         int k = 1;
-//
-//         while (k <= first && k <= second && k <= third)
-//         {
-//             if (first % k == 0 && second % k == 0 && third % k == 0)
-//             {
-//                 gcd = k;
-//             }
-//             k++;
-//         }
-//         System.out.println("Your greatest  gcd is   " + gcd);
-//
-//     }
+     {
+         System.out.println("Enter first number; ");
+         int first = input.nextInt();
+         System.out.println("Enter second numnber:  ");
+         int second = input.nextInt();
+         System.out.println("Enter third number:  ");
+
+         int third = input.nextInt();
+
+         int gcd = 1;
+         int k = 1;
+
+         while (k <= first && k <= second && k <= third)
+         {
+             if (first % k == 0 && second % k == 0 && third % k == 0)
+             {
+                 gcd = k;
+             }
+             k++;
+         }
+         System.out.println("Your greatest  gcd is   " + gcd);
+
+     }
 
 
      //(Find the smallest n such that n2 7 12,000)
@@ -199,40 +212,45 @@ public class Loops {
      }
 
 //(Find numbers divisible by 5 and 6) Write a program that displays all the numbers from 100 to 1,000,
-// ten per line, that are divisible by 5 and 6.
+    // ten per line, that are divisible by 5 and 6.
 // Numbers are separated by exactly one space.
-     static void divisibleBy5And6()
-     {
-     final int NUMBER_PER_LINE = 10;
-         int count = 0;
-         //int result = 0;
-
-     for (int i = 100; i < 1000; i++)
-         {
-             if (i%5 == 0 ^ i%6 ==0) {
-                 //result = i;
-                 count++;
-                 if (count % NUMBER_PER_LINE == 0)
-                 {
-                     System.out.println(i);
-                 }
-                 else {
-                     System.out.print(i + " ");
+    public void divisibleBy5And6() {
+        int count = 1;
+        for (int i = 100; i < 200; i++) {
+            if (i % 5 == 0 && i % 6 != 0 || i % 6 == 0 && i % 5 != 0) {
+                if (count % 10 == 0) {
+                    System.out.println();
+                } else {
+                    System.out.print(i + " ");
+                }
+                count++;
+            }
+        }
+    }
 
 
-             }
-         }
+ /*(Find numbers divisible by 5 and 6) Write a program that displays all the numbers from 100 to 1,000,
+ ten per line, that are divisible by 5 and 6.
+ Numbers are separated by exactly one space.
+    from SJ:
+    use variables:
+    Boolean isDividableBy5AndNot6 = (i % 5 == 0 && i % 6 != 0)
+    Boolean isDividableBy6AndNot5= (i % 6 == 0 && i % 5 != 0)
+    */
 
-//         if (count % NUMBER_PER_LINE == 0)
-//         {
-//             System.out.println(result);
-//         }
-//         else {
-//             System.out.print(result + " ");
-         }
-     }
-
-
+    public void divisibleBy5And6ButNotBoth() {
+        int count = 1;
+        for (int i = 100; i < 200; i++) {
+            if ((i % 5 == 0 && i % 6 != 0) || (i % 6 == 0 && i % 5 != 0)) {
+                if (count % 10 == 0) {
+                    System.out.println();
+                } else {
+                    System.out.print(i + " ");
+                }
+                count++;
+            }
+        }
+    }
      //Write a program that prompts the user to enter the number of students
      // and each student’s name and score, displays the name of the student with the highest score.
      static void findTheHIghestScore()
@@ -303,8 +321,6 @@ public class Loops {
         long testTime = endTime - startTime;
         System.out.println("Correct count is " + correctCount +
                 "\nTest time is " + testTime / 1000 + " seconds\n" + output);
-
-
 }
 
 static void conversionTableKgtoPounds()
@@ -319,12 +335,9 @@ static void conversionTableKgtoPounds()
         System.out.printf("%10.0f", kg);
         System.out.printf("%10.1f", pounds);
         System.out.println();
-
-
-    }
+   }
 
 }
-
      static void sideBysideTableKgtoPounds() {
          double kg = 0.0;
          double pounds = 0.0;
@@ -466,8 +479,8 @@ static void needMakeTheSame()
                                 System.out.print(i * j + " ");
 
                     }
-      static void last()
-       {
+      static void last() {
+
                     int i = 1; do {
                         int num = 1;
                         for (int j = 1; j <= i; j++) {
@@ -476,5 +489,220 @@ static void needMakeTheSame()
                         System.out.println();
                         i++;
                     } while (i <= 5);
+     }
+
+     //Suppose that the tuition for a university is $10,000 this year and tuition increases 7% every year.
+    // In how many years will the tuition be doubled?
+
+     void whenTuitionDoubles() {
+        float tuit = 10000F;
+        int year = 0;
+        while (tuit <= 20000)
+        {
+            tuit = (float) (tuit*1.07);
+            year ++;
+        }
+         System.out.println(year);
+         System.out.printf("$%.1f", tuit);
+     }
+
+
+    boolean isStringPalindrome (String pal) {
+        int start = 0;
+        int end = pal.length() - 1;
+
+        while (end > start)
+        {
+            if (pal.charAt(start) != pal.charAt(end))
+                return false;
+            start++;
+            end--;
+        }
+        return true;
+
+    }
+
+    public void display50FirstPrimeNumbers() {
+        int prime = 2;
+        int count = 0;
+
+        while (count <= 50) {
+
+            boolean isPrime = true;
+            for (int div = 2; div <= prime / 2; div++) {
+                if (prime % div == 0) {
+                    isPrime = false;
+                    break;
                 }
+            }
+            if (isPrime) {
+                count++;
+
+                if (count % 10 == 0) {
+                    System.out.println(prime + " ");
+                } else {
+                    System.out.print(prime + " ");
+                }
+
+
+            }
+            prime++;
+
+        }
+    }
+
+    //Count positive and negative numbers and compute the average of numbers
+    public void countPOsitiveNegativeAverage() {
+        int even = 0;
+        int uneven = 0;
+        int sum = 0;
+        int in;
+        System.out.println(" Enter a number, if you enter \"0\" program will stop: ");
+        while ((in = input.nextInt())!=0)
+        {
+            sum += in;
+
+            if  (in == 0)
+                break;
+
+            else if (in % 2 == 0) {
+                even++;
+            }
+            else if (in % 2 != 0) {
+                uneven++;
+            }
+        };
+
+        System.out.println("Even numbers amount is " + even);
+        System.out.println("Uneven amount numbers is " + uneven);
+        System.out.println("Average " + sum/(even+uneven));
+    }
+
+    public void print() {
+        System.out.printf("%-10s%10s\n", "Kilograms", "Pounds");
+        int kg;
+
+        for ( kg = 1; kg < 20; kg ++)
+        {
+            float pound = (float) (kg*2.2);
+            System.out.printf("%-10d%10.1f\n", kg, pound);
+        }
+
+    }
+
+    public void twoHighestScores()
+    {
+        /*
+        (Find the two highest scores) Write a program that prompts the user to enter the number of students
+        and each student’s name and score,
+        and finally displays the student with the highest score and the student with the second-highest score.
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter total number of students");
+        int studentNumber = scanner.nextInt();
+        int highestScore = 0;
+        int secondHighestScore = 0;
+        String thatStudent = " ";
+        String that2Student = " ";
+
+        for (int i = 1; i <= studentNumber; i++)
+        {
+            System.out.println("Enter student #" + i + " name ");
+            Scanner scanner3 = new Scanner(System.in);
+            String name = scanner3.nextLine();
+
+            Scanner scanner2 = new Scanner(System.in);
+            System.out.println("Enter student #" + i + " score");
+            int score = scanner2.nextInt();
+
+            if (score > highestScore)
+            {
+                secondHighestScore = highestScore;
+                that2Student = thatStudent;
+
+                highestScore=score;
+                thatStudent = name;
+            }
+        }
+        System.out.println(thatStudent + " has the highest score, score is " + highestScore);
+        System.out.println(that2Student + " has the second highest score, score is " + secondHighestScore);
+    }
+
+    public void anotherGCDSolution() {
+        /*
+       (Compute the greatest common divisor) Another solution
+        */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter first digit ");
+        int digit1 = scanner.nextInt();
+
+        System.out.println("Enter second digit ");
+        int digit2 = scanner.nextInt();
+
+        int smallestInput;
+        int gcd = 1;
+
+        boolean la = digit1 > digit2;
+
+        if (la) {
+            smallestInput = digit2;
+            gcd = digit2;
+        }
+        else {
+            smallestInput = digit1;
+            gcd = digit1;
+        }
+
+        System.out.println(" And " + smallestInput + " this is the smallest number");
+
+        while (smallestInput <=1) {
+            if (digit1 % smallestInput == 0 && digit2 % smallestInput == 0) {
+                gcd = smallestInput;
+                smallestInput--;
+            }
+        }
+        System.out.println("GCD = " + gcd);
+    }
+
+    /*(Find the factors of an integer)  //Nikola helped
+    Write a program that reads an integer and displays all its smallest factors in increasing order.
+    For example, if the input integer is 120, the output should be as follows: 2, 2, 2, 3, 5.
+*/
+    public void findFactors() {
+    int number = 120;
+    int div =2;
+        while (div <= number) {
+
+        if ( number % div == 0) {
+
+            System.out.println(div + ", ");
+            number = number / div; //keep dividing without incrementing
+        }
+        else
+            div ++;
+    }
+  }
+   /*(Display pyramid) Write a program that prompts the user to enter an integer from 1 to 15
+     and displays a pyramid, as shown in the following sample run:
+    */
+   public void displayPyramid() {
+       int input = 3;
+       for (int i = 1; i <= input; i++) {
+           for (int x = 1; x <= input - i; x++) {
+               System.out.print("  ");
+           }
+           for (int k = i; k > 1; k--) {
+               System.out.print(k + " ");
+           }
+
+           for (int j = 1; j <= i; j++) {
+               System.out.print(j + " ");
+           }
+
+           System.out.println();
+
+       }
+   }
 }
+
+

@@ -1,89 +1,181 @@
-
-/**
- * Created by anastasia on 10/16/16.
- */
 public class Arrayss {
-    static int[] mynew = new int[10];
-    static int[] catarray = new int [2];
 
+    public void shiftElementsToLeft() {
 
-    public static void smth()
-    {
-        for (int i = 0; i < mynew.length; i++)
-        {
-            mynew[i] = i+7;
+        int[] array = {1, 7, 2, 3, 4, 5, 7, 8, 8};
+
+        int first = array[0];//1
+
+        for (int i = 0; i < array.length - 1; i++) {
+            array[i] = array[(array.length - 1) - i];
         }
-        System.out.println(mynew.length);
-        //one();
+        array[array.length - 1] = first;
+
+        for (int i : array) {
+            System.out.print(array[i]);
+        }
+    }
+
+    public void findLardestIndexOfLargestElement() {
+        int[] array = {5, 7, 3, 2, 4, 8, 9, 4, 9};
+        int max = 0;
+        int index = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+
+                index = i;
+            }
+        }
+        System.out.println("\"The first largest element is " + max + " and it's index is " + index + ".\"");
 
     }
 
-    //public static void one ()
-    {
-        for (int i = 0; i < mynew.length; i++) {
-            mynew[i] = i+7;
+    public void findSmallestElement() {
+        int[] array = {0, 7, 3, 2, 4, 80, 1, 9, 4, 9};
+        int smallest = array[0];
+
+        for (int i = 1; i < array.length - 1; i++) {
+            if (smallest > array[i]) {
+                smallest = array[i];
+            }
+        }
+        System.out.println(smallest + " smallest");
+    }
+
+    public void copyArray() {
+        int[] source = {3, 4, 5};
+        int[] source2 = new int[2];
+
+        System.arraycopy(source, 0, source2, 1, source.length - 2);
+        for (int u : source2) {
+            System.out.print(u);
+        }
+    }
+
+    public int[] reverseArray() {
+
+        int[] list = {1, 2, 3, 5, 4, 7, 0, 55, 66};
+        int mid = list.length / 2;
+        for (int i = 0, j = list.length - 1; i < mid; i++, j--) {
+            int temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
         }
 
-        for (int o : mynew)
-        {
-            System.out.print(o + " ");
+        return list;
+    }
+
+    public void countOccuranceOfTheLetterInTheArrayOfChars() {
+
+        char[] arrayChar = new char[100];
+        for (int i = 0; i < arrayChar.length; i++) {
+            //arrayChar[i] = (char)('a' + Math.random() * ('z' - 'a') );//generate random char
+            arrayChar[i] = (char) (97 + Math.random() * (123 - 97));
+
         }
+        for (char u : arrayChar) {
+            System.out.print(u);
+        }
+
         System.out.println();
-        int sum = mynew[0] + mynew[1];
-        System.out.println("The sum of 2 first elements is " + sum);
 
-        //Write a loop that computes the sum of all elements in the array.
-        int total = 0;
-        for (int i = 0; i < mynew.length; i ++)
-        {
-            total += mynew[i];
-        }
-        System.out.println("total sum of all array elements is " + total);
+        int[] arrayInt = new int[26];
+        for (int i = 0; i < arrayChar.length; i++) {
 
-        //Write a loop that finds the minimum element in the array.
-        int min = 9;
-        for (int i = 0; i < mynew.length; i ++)
-        {
-            if (mynew[i] < min)
-                min = mynew[i];
+            arrayInt[arrayChar[i] - 97]++;
         }
+
         System.out.println();
-        System.out.println("Min value of an array is " + min);
 
-        //Randomly generate an index and display the element of this index in the array.
-        int random = (int)Math.random() * mynew.length + 1;
-        System.out.println("The value of random element " + "\"" + random + "\" + " + "is " + mynew[random]);
-
-        //Use an array initializer to create another array with the initial values 3.5, 5.5,
-       // 4.52, and 5.6.
-        double [] myarray = {3.5, 5.5, 4.25, 5.6};
-
-        double[] r = new double [100];
-
-        for (int i = 0; i < r.length; i++)
-        {
-            r[i] = Math.random() * 100;
+        for (int u = 0; u < arrayInt.length; u++) {
+            System.out.print((char) (u + 97) + " -> " + arrayInt[u] + "; ");
         }
 
-        int list[] = {1,2,3,4,5,6};
+    }
 
-        for (int i = 1; i <list.length; i ++)
-
-        {
-            list[i] = list[i - 1];
+    public int linearSearch() {
+        int[] list = {1, 4, 4, 2, 5, -3, 6, 2};
+        int key = -3;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == key) {
+                return i;
+            }
         }
+        return -1;
+    }
 
-        for (int o : list)
-        {
-            System.out.print(o + " ");
-        }
+    public int binarySearch() {
+        int[] list = {2, 4, 7, 10, 11, 45, 50, 59, 60, 66, 69, 70, 79};
+        int key = 120;
+        int low = 0;
+        int high = list.length - 1;
 
-        for (int i = 0; i < list.length; i ++)
-        {
-            System.out.println(list[i] + " bla");
+        while (high >= low) {
+            int med = (low + high) / 2;
+
+            if (key == list[med]) {
+                return med;
+            } else if (key > list[med]) {
+                low = med + 1;
+            } else if (key < list[med]) {
+                high = med - 1;
+
+            }
         }
+        return -low - 1;
 
 
     }
 
+    public void sortingArrays() {
+
+        int[] array = {10, 17, 3, 2, 4, 80, 1, 9, 4, 6, 0};
+
+        int smallest;
+
+        for (int i = 0; i < array.length - 1; i++) {
+            smallest = array[i];
+
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < smallest) ///change this to ddicrease/increase
+                {
+                    smallest = array[j];
+                    array[j] = array[i];
+                    array[i] = smallest;
+                }
+            }
+        }
+//        if (array[0] > array[array.length-1])
+//        {
+//            int a = array[0];
+//            array[0] = array[array.length-1];
+//            array[array.length-1] = a;
+//        }
+
+        for (int i : array) {
+            System.out.print(i + ", ");
+        }
+    }
+
+    public void sortingArray() {
+
+        int[] array = {10, 17, 3};
+        //int utility = Arrays.binarySearch(array.33);
+
+        int min;
+        for (int i = 0; i < array.length; i++) {
+            min = array[i];
+            for (int j = i+1; j < array.length; j++) {
+                if (array[j] < min) {
+                    min = array[j];
+                    array[j] = array[i];
+                    array[i] = min;
+                }
+            }
+        }
+        for (int t: array){
+            System.out.print(t + ", ");
+        }
+    }
 }

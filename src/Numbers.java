@@ -396,7 +396,7 @@ static public void showCurrentTime()
         System.out.println("DONE");
 
     }
-    public static int fromGit(int N)
+    public int fromGit(int N)
     {
 //            int N = null;
         int sum = 0;
@@ -405,7 +405,7 @@ static public void showCurrentTime()
 
             for (int j = 2; j <= N; j = j * 2)
             {
-                System.out.println(j);
+                System.out.print(j);
                 for (int k = 1; k <= j; k++)
                     sum++;
             }
@@ -433,10 +433,7 @@ static public void showCurrentTime()
 }
     public static void PrintNumberInWord(int number){
         switch (number)
-
-
         {
-
             case 1:
             System.out.println("MOnday");
             break;

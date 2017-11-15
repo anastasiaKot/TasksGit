@@ -1,11 +1,12 @@
-/**
- * Created by anastasia on 9/17/17.
- */
+import DoEveryDay.FactorialRecursive;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-        Loops loops = new Loops();
-        loops.computeGCD(880, 7882);
+        FactorialRecursive factorialRecursive = new FactorialRecursive();
+        System.out.println(factorialRecursive.factorial(30));
 
- }
+    }
+
 }
+

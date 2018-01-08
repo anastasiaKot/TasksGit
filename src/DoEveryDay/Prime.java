@@ -1,9 +1,8 @@
 package DoEveryDay;
 
 public class Prime {
-    public static void main(String[]args)
-    {
-        for(int i = 2; i <= 7; i++)
+    public static void main(String[]args) {
+        for (int i = 2; i < 100; i++)
         {
             if(isPrime(i))
             {
@@ -14,10 +13,12 @@ public class Prime {
 
     public static boolean isPrime(int number)
     {
-        for(int i = 2; i < number; i++)
+        if(number == 1) return false;
+        if(number%2==0) return false;
+        for (int i = 2; i < number; i++)
         {
             if(number % i == 0) return false;
         }
         return true;
     }
-}
+    }
